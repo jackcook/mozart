@@ -5,7 +5,7 @@ Mozart is a very lightweight image loader for iOS. It was inspired by [Picasso](
 ## Features
 
 - Asynchronous image loading with one line of code
-- Loading the image into an imageview/button in that same line of code
+- Loading the image into an image view/button in that same line of code
 - Retrieve the image upon completion, in the same line of code
 
 ---
@@ -16,6 +16,12 @@ If you want to load an image directly into a view, without retrieving it afterwa
 
 ```swift
 Mozart.load("http://placehold.it/100").into(imageView)
+OR
+Mozart.load("http://placehold.it/100").into(button)
+OR
+Mozart.load("http://placehold.it/100").into(button, forState: .Normal)
+OR
+Mozart.load("http://placehold.it/100").into(button, forStates: [.Normal, .Highlighted])
 ```
 
 ### Basic Image Retrieval
